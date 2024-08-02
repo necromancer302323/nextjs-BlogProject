@@ -34,7 +34,7 @@ export default function BlogsComponent(){
       <div className="flex justify-center">
         <div className="flex flex-col  justify-center">
           {blogs.map((blog: { title: string; content: string; author: { name: any; }; id: number; })=><BlogCard
-          
+          key={blog.id}
             title={blog.title}
             content={blog.content}
             publishedDate="10/9/2020"

@@ -1,6 +1,6 @@
 "use client"
 import { useRouter } from "next/navigation";
-import { Avatar } from "./BlogCard";
+import { AvatarForAppBar } from "./BlogCard";
 
 export const AppBar = () => {
     const router=useRouter()
@@ -17,7 +17,7 @@ export const AppBar = () => {
           font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
           Create a Blog
         </button>
-        <Avatar name="harkirat" size={10} />
+        <AvatarForAppBar name="harkirat" size={10} />
       </div>
     </div>
   );

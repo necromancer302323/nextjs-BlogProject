@@ -54,14 +54,29 @@ export function Circle(){
     </div>
 }
 
-export function Avatar({ name,size }: { name: string,
-    size:number }) {
+export function Avatar({ name,size }: { name: string,size:number }){
+  const route=useRouter()
   return (
     
-<div className={`relative inline-flex items-center justify-center w-${size} h-${size} overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 w-10`}>
+<div className={`relative inline-flex items-center justify-center w-${size} h-${size} overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 w-10`} >
     <span className="font-medium text-gray-600 dark:text-gray-300">{name[0]}</span>
 </div>
 
+  );
+
+
+
+}
+
+
+export function AvatarForAppBar({ name,size }: { name: string,size:number }){
+  const route=useRouter()
+  return (
+    <button onClick={()=>{return route.push("/userSettings")}}>
+<div className={`relative inline-flex items-center justify-center w-${size} h-${size} overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600 w-10`} >
+    <span className="font-medium text-gray-600 dark:text-gray-300">{name[0]}</span>
+</div>
+</button>
   );
 
 
